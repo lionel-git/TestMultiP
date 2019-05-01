@@ -1,2 +1,2 @@
 #!/bin/bash
-dotnet bin/Debug/netcoreapp2.2/TestMultiP.dll /mnt/c/tmp/test.log
+dotnet bin/Debug/netcoreapp2.2/TestMultiP.dll $1 /mnt/c/tmp/test.log
