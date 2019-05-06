@@ -1,1 +1,1 @@
-copy source.txt Source.cs
+copy source.txt Source.g.cs
