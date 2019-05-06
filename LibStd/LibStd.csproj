@@ -2,8 +2,13 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <AdditionalFileItemNames>Source.cs</AdditionalFileItemNames>
+    <EnableDefaultCompileItems>False</EnableDefaultCompileItems>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="WorkerStd.cs" />
+    <Compile Include="Source.g.cs" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="PCRE.NET" Version="0.9.0" />
@@ -11,7 +16,8 @@
   </ItemGroup>
 
   <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
-    <Exec Command="call gen_file.cmd" />
+    <Exec Command="gen_file.cmd" />
   </Target>
+
 
 </Project>
