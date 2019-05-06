@@ -1,11 +1,17 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <AdditionalFileItemNames>Source.cs</AdditionalFileItemNames>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="PCRE.NET" Version="0.9.0" />
+    
   </ItemGroup>
+
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="call gen_file.cmd" />
+  </Target>
 
 </Project>

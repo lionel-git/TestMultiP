@@ -11,6 +11,10 @@ namespace TestCore
             {
                 Console.WriteLine("Hello World from Core");
                 var w = new WorkerStd();
+
+                int b = w.Dummy0(5);
+                Console.WriteLine($"res={b}");
+
                 string path = args.Length >= 1 ? args[0] : @"c:\tmp\test.log";
                 Console.WriteLine(w.CheckFile(path));
                 string test = "Abcd";

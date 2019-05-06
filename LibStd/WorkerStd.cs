@@ -5,7 +5,7 @@ using PCRE;
 
 namespace LibStd
 {
-    public class WorkerStd
+    public partial class WorkerStd
     {
         public int CheckFile(string path)
         {
@@ -19,6 +19,11 @@ namespace LibStd
         {
             var pcre = new PcreRegex("^A.*");
             return pcre.IsMatch(name);
+        }
+
+        public int Dummy0(int a)
+        {
+            return Dummy(a);
         }
     }
 }
