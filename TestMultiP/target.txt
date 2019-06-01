@@ -1,0 +1,2 @@
+echo toto = Titi
+HH = C:\Users\lione
